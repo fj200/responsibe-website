@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="overlay" class="overlay">
+        <h3>searching now</h3>
+    
+    </div>
+    <div class="hero-bg">
+        <section class="top">
+            <header>
+                <a href="#">yummy.eats</a>
+            
+            </header>
+
+            <h1><span>The healthy</span> Eating experience</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque vel aliquam enim quibusdam a, quam natus obcaecati odit dolor? Ipsam neque, laboriosam rem vitae laborum asperiores incidunt et blanditiis beatae!            </p>
+            <div class="form-container">
+                <form action="#">
+                    <div class="form-left">
+                        <label for="city">Enter your city:</label>
+                        <input type="text" name="city" id="city">
+                        <p>Example: "San Diego"</p>
+                        
+                    </div>
+                    <input id="cta-btn" type="button" value="Find Food Now">
+                </form>
+            </div>
+
+        </section>
+        
+    </div>
+    <section class="authentic">
+        <div class="right-col">
+            <h2>Authentic. Awesome</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident mollitia ab quisquam at quo velit, labore hic placeat eligendi facere ad sunt. Impedit fugiat harum distinctio obcaecati, eaque minima ea.</p>
+        </div>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/food.jpg" alt="Picture of food in a bowl">
+   <!---we use img tag instead of usig css because there is nothing overlapping it-->
+    </section>
+    <script>
+        let btn= document.getElementById("cta-btn");
+        let overlay= document.getElementById("overlay");
+        btn.addEventListener("click",()=>{
+            overlay.style.display="grid";
+            overlay.classList.add("animate-overlay");
+            setInterval(clickagain,3000)
+        })
+        function clickagain(){
+            overlay.style.display="none";
+            overlay.classList.remove("animate-overlay");
+        }
+    </script>
+</body>
+</html>
